@@ -1,17 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from '../views/HomeView.vue'; // Import HomeView
-import PaintingPage from '../views/paintingPage.vue'; // Import PaintingPage
+import HomeView from '../views/HomeView.vue'; 
+import PaintingPage from '../views/paintingPage.vue'; 
 import MyExoplanetsSystem from '../views/MyExoplanetsSystem.vue';
 import Spacetravel from '@/views/Spacetravel.vue';
 
 const routes = [
   {
-    path: '/', // This path leads to HomeView
+    path: '/', 
     name: 'Home',
     component: HomeView,
   },
   {
-    path: '/painting', // This path leads to PaintingPage
+    path: '/painting', 
     name: 'Painting',
     component: PaintingPage,
   },

@@ -1,19 +1,19 @@
 <template>
-     <div>
+  <div>
     <WebHeader />
     <div class="background-image">
       <div class="content">
         <h1>My Exoplanets System</h1>
-<div class="exoplanet-system">
-  <div v-for="(planet, index) in savedPlanets"
-       :key="index"
-       :class="'planet planet-' + (index + 1)">
-       <img :src="(`@/assets/paintedPlanets/${planet}`)" alt="Exoplanet" />
+        <div class="exoplanet-system">
+          <div v-for="(planet, index) in savedPlanets"
+            :key="index"
+            :class="'planet planet-' + (index + 1)">
+            <img :src="(`@/assets/paintedPlanets/${planet}`)" alt="Exoplanet" />
+          </div>
         </div>
-</div>
-</div>
-</div>
-</div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -63,15 +63,15 @@ export default {
 
 <style scoped>
 .background-image {
-  position: fixed; /* Make the background fixed */
-  top: 0; /* Align to the top */
-  left: 0; /* Align to the left */
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  background-image: url('@/assets/images/fantasy.jpg'); /* Replace with your image */
-  background-size: cover; /* Cover the entire area */
-  background-position: center; /* Center the image */
-  z-index: -1; /* Set below other content */
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background-image: url('@/assets/images/fantasy.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  z-index: -1; 
 }
 
 .content {
@@ -79,7 +79,7 @@ export default {
   z-index: 2; 
   text-align: center;
   color: white;
-  margin-top: 20vh; /* Adjust as needed */
+  margin-top: 20vh; 
   min-height: 200vh;
 }
 
