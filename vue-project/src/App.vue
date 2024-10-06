@@ -3,11 +3,21 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div>
+  <div id="app">
+    <paintingPage />
   </div>
-
-  <RouterView />
 </template>
+
+<script>
+import paintingPage from '/Users/laura/explore-trappist-1/vue-project/src/views/paintingPage.vue';
+
+export default {
+  components: {
+    paintingPage,
+  },
+};
+</script>
+
 
 <style scoped>
 
