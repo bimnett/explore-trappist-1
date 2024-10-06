@@ -8,7 +8,7 @@
   <div v-for="(planet, index) in savedPlanets"
        :key="index"
        :class="'planet planet-' + (index + 1)">
-       <img :src="require(`@/assets/paintedPlanets/${planet}`)" alt="Exoplanet" />
+       <img :src="(`@/assets/paintedPlanets/${planet}`)" alt="Exoplanet" />
         </div>
 </div>
 </div>
