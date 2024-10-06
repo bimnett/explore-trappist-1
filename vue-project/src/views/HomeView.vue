@@ -1,7 +1,7 @@
 <template>
   <div >
   <WebHeader />
-  id="app"> <!-- Use a div instead of body to maintain a single root element -->
+ <!-- Use a div instead of body to maintain a single root element -->
     
     <!-- Background Section -->
     <div class="background">
@@ -44,7 +44,7 @@ export default {
 
     // Function to move the bus and navigate
     function moveBus() {
-      busTransform.value = 'translateX(-100vw)'; // Move off-screen
+      busTransform.value = 'translateX(100vw)'; // Move off-screen
       setTimeout(() => {
         router.push('/painting'); // Change this to the desired URL
       }, 1000); // Wait for the duration of the animation (1s)
@@ -69,10 +69,7 @@ export default {
 
 <style scoped>
 
-#app {
-  background-image: url('@/assets/images/Trappist.jpg.webp');
-  
-}
+
 
 .logo-img {
   width: 160px; /* Adjust the size as needed */
