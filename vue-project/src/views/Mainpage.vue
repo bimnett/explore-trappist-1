@@ -3,8 +3,8 @@
     <nav class="navbar">
       <img src="@/assets/images/logo.png" alt="Logo Image" class="logo-img" />
       <ul class="nav-links">
-        <li><router-link to="/painting">My Painting Page</router-link></li>
-        <li><router-link to="/MyExoplanetSystem">My Solar System</router-link></li>
+        <li><router-link to="#" @click.prevent="goToPaintingPage">My Painting Page</router-link></li>
+        <li><router-link to="#" @click.prevent="goToExoplanetSystem">My Solar System</router-link></li>
       </ul>
     </nav>
     <!-- Background Section -->
@@ -25,6 +25,22 @@ export default {
   setup() {
     const router = useRouter();
     const busTransform = ref('translateX(0)');
+
+    // Function to navigate to the painting page
+    function goToPaintingPage() {
+      busTransform.value = 'translateX(-100vw)'; // Move off-screen
+      setTimeout(() => {
+        router.push('/painting'); // Navigate to the painting page
+      }, 1000); // Wait for the duration of the animation (1s)
+    }
+
+    // Function to navigate to the exoplanet system
+    function goToExoplanetSystem() {
+      busTransform.value = 'translateX(-100vw)'; // Move off-screen
+      setTimeout(() => {
+        router.push('/MyExoplanetSystem'); // Navigate to the exoplanet system
+      }, 1000); // Wait for the duration of the animation (1s)
+    }
 
     // Function to move the bus and navigate
     function moveBus() {
