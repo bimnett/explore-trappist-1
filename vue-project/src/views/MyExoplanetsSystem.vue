@@ -38,12 +38,21 @@ export default {
     window.addEventListener('scroll', this.handleScroll);
   },
   methods: {
-    handleScroll() {
-      const scrollY = window.scrollY;
-      const bg = document.querySelector('.background-image');
-      // Zoom effect as you scroll down
-      bg.style.backgroundSize = `${100 + scrollY / 10}%`;
-    }
+    
+  handleScroll() {
+    const scrollY = window.scrollY;
+    const bg = document.querySelector('.background-image');
+
+    // Limit the zoom to a maximum value (e.g., 200% zoom)
+    const zoom = Math.min(200, 100 + scrollY / 10);
+
+    // Request animation frame for smoother updates
+    requestAnimationFrame(() => {
+      bg.style.backgroundSize = `${zoom}%`;
+    });
+  }
+
+
   },
   beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
@@ -71,6 +80,7 @@ export default {
   text-align: center;
   color: white;
   margin-top: 20vh; /* Adjust as needed */
+  min-height: 200vh;
 }
 
 .exoplanet-system {
