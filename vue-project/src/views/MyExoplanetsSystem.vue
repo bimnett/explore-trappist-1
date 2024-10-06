@@ -7,11 +7,11 @@
       <div class="content">
         <h1>My Exoplanets System</h1>
 <div class="exoplanet-system">
-  <img v-for="(planet, index) in savedPlanets"
+  <div v-for="(planet, index) in savedPlanets"
        :key="index"
-       :src="require(`@/assets/paintedPlanets/${planet}`)"
-       alt="Exoplanet"
-       class="exoplanet-image" />
+       :class="'planet planet-' + (index + 1)">
+       <img :src="require(`@/assets/paintedPlanets/${planet}`)" alt="Exoplanet" />
+        </div>
 </div>
 </div>
 </div>
@@ -21,17 +21,19 @@
 export default {
   data() {
     return {
-      savedPlanets: []
+      savedPlanets:
+      ['Trappist1a.png',
+        'Trappist1b.png',
+        'trappist1c.png',
+        'Trappist1d.png',
+        'Trappist1e.png',
+        'Trappist1f.png',
+        'trappist1g.png']
     };
-  },
-  mounted() {
-    const storedPlanets = JSON.parse(localStorage.getItem('savedPlanets'));
-    if (storedPlanets) {
-      this.savedPlanets = storedPlanets;
-    }
-  },
-};
+  }
+  };
 </script>
+  
 
 <style scoped>
 .video-background {
@@ -59,17 +61,53 @@ export default {
 }
 
 .exoplanet-system {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.exoplanet-image {
-  width: 100px; 
-  height: 100px;
-  margin: 10px;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
   border-radius: 50%;
   border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.planet {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+.planet img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.Trappist1a {
+  top: 10%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Trappist1b {
+  top: 30%; left: 75%;
+  transform: translate(-50%, -50%);
+}
+.Trappist1c {
+  top: 50%; left: 90%;
+  transform: translate(-50%, -50%);
+}
+.Trappist1d {
+  top: 70%; left: 75%;
+  transform: translate(-50%, -50%);
+}
+.Trappist1e {
+  top: 90%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Trappust1f {
+  top: 70%; left: 25%;
+  transform: translate(-50%, -50%);
+}
+.Trappist1g {
+  top: 30%; left: 25%;
+  transform: translate(-50%, -50%);
+}
+
 </style>
