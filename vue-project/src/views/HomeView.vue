@@ -123,7 +123,7 @@ export default {
 /* Background Styling */
 .background {
 position: fixed;
-top:0;
+top: 50px;
 left:0;
 width:100%;
 height:100%;
@@ -137,7 +137,7 @@ height:100%;
 .bus {
   cursor: pointer; /* Make the bus clickable */
   position: absolute;
-  bottom: -50px;
+  bottom: -30px;
   right: 20px;
   transition: transform 1s ease; /* Smooth transition for the bus movement */
 }
