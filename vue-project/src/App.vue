@@ -9,7 +9,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <script>
-import paintingPage from '/Users/laura/explore-trappist-1/vue-project/src/views/paintingPage.vue';
+import paintingPage from 'explore-trappist-1/vue-project/src/views/paintingPage.vue';
 
 export default {
   components: {
