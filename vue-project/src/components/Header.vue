@@ -1,7 +1,7 @@
 <template>
     <div class="topbar">
       <div class="title-header">
-        <h3>Hello Space lovers</h3>
+        <h3>Trappist Explorers</h3>
       </div>
       
       <nav class="navbar">
