@@ -30,60 +30,79 @@
   </template>
 <script>
 import ColorablePlanet from '@/components/ColorablePlanet.vue';
-import WebHeader from '@/components/Header.vue'; 
+import WebHeader from '@/components/Header.vue';
 
 export default {
-    components: {
+  components: {
     WebHeader,
-    ColorablePlanet 
+    ColorablePlanet
   },
-   data() {
-     return {
-        message:"",
-        headerColor: "#2B1D5A",
-        textColor:"black",
-     }; 
+  data() {
+    return {
+      message: "",
+      headerColor: "#2B1D5A",
+      textColor: "black",
+      audio: null,
+    };
+  },
+  methods: {
+    stopAudio() {
+      if (this.audio) {
+        this.audio.pause();
+        this.audio.currentTime = 0; 
+      }
     },
-    methods:{
-        first_planet(){
-            this.message="Trappist 1b";
-            this.headerColor = "#679fa1";
-            this.textColor= "black";
-        },
-        second_planet(){
-            this.message="Trappist 1c";
-            this.headerColor = "#ffffec";
-            this.textColor= "black";
-        },
-        third_planet(){
-            this.message="Trappist 1d";
-            this.headerColor = "#334763";
-            this.textColor= "white";
-        },
-        fourth_planet(){
-            this.message="Trappist 1e";
-            this.headerColor = "6f827b";
-            this.textColor= "black";
-        },
-        fifth_planet(){
-            this.message="Trappist 1f";
-            this.headerColor = "#c4baae";
-            this.textColor= "black";
-        },
-        sixth_planet(){
-            this.message="Trappist 1g";
-            this.headerColor = "#e3cfbd";
-            this.textColor= "black";
-        },
-        seventh_planet(){
-            this.message="Trappist 1h";
-            this.headerColor = "#b88b69";
-            this.textColor= "black";
-        },
-        homePage(){
-            this.$router.push({ name: 'Home' });
-        },
+    playAudio(src) {
+      this.stopAudio(); 
+      this.audio = new Audio(src); 
+      this.audio.play(); 
     },
+    first_planet() {
+      this.message = "Trappist 1b";
+      this.headerColor = "#679fa1";
+      this.textColor = "black";
+      this.playAudio('/Audio/Audio1.wav');
+    },
+    second_planet() {
+      this.message = "Trappist 1c";
+      this.headerColor = "#ffffec";
+      this.textColor = "black";
+      this.playAudio('/Audio/Audio1.wav');
+    },
+    third_planet() {
+      this.message = "Trappist 1d";
+      this.headerColor = "#334763";
+      this.textColor = "white";
+      this.playAudio('/Audio/Audio3.wav'); 
+    },
+    fourth_planet() {
+      this.message = "Trappist 1e";
+      this.headerColor = "#6f827b";
+      this.textColor = "black";
+      this.playAudio('/Audio/Audio4.wav'); 
+    },
+    fifth_planet() {
+      this.message = "Trappist 1f";
+      this.headerColor = "#c4baae";
+      this.textColor = "black";
+      this.playAudio('/Audio/Audio5.wav'); 
+    },
+    sixth_planet() {
+      this.message = "Trappist 1g";
+      this.headerColor = "#e3cfbd";
+      this.textColor = "black";
+      this.playAudio('/Audio/Audio6.wav'); 
+    },
+    seventh_planet() {
+      this.message = "Trappist 1h";
+      this.headerColor = "#b88b69";
+      this.textColor = "black";
+      this.playAudio('/Audio/Audio7.wav'); 
+    },
+    homePage() {
+      this.$router.push({ name: 'Home' });
+    },
+  },
 };
 </script>
 <style scoped>
