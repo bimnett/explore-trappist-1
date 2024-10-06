@@ -21,7 +21,7 @@
     <div class="info-container">
         Info Container
     </div>
-  </template>
+</template>
 <script>
 export default {
    data() {
