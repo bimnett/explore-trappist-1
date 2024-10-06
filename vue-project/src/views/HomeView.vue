@@ -1,9 +1,6 @@
 <template>
-  <div >
-  <WebHeader />
- <!-- Use a div instead of body to maintain a single root element -->
-    
-    <!-- Background Section -->
+  <div>
+    <WebHeader />
     <div class="background">
       <div class="bus" @click="moveBus" :style="{ transform: busTransform }">
         <img src="@/assets/images/Bus.png" alt="Bus Image" />
@@ -14,7 +11,6 @@
 
 <script>
 import WebHeader from '@/components/Header.vue'; 
-
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 
@@ -27,33 +23,29 @@ export default {
     const router = useRouter();
     const busTransform = ref('translateX(0)');
 
-    // Function to navigate to the painting page
     function goToPaintingPage() {
-      busTransform.value = 'translateX(-100vw)'; // Move off-screen
+      busTransform.value = 'translateX(-100vw)'; 
       setTimeout(() => {
-        router.push('/painting'); // Navigate to the painting page
-      }, 1000); // Wait for the duration of the animation (1s)
+        router.push('/painting');
+      }, 1000);
     }
+    
     function goToMyExoplanetsSystem() {
-      busTransform.value = 'translateX(-100vw)'; // Move off-screen
+      busTransform.value = 'translateX(-100vw)'; 
       setTimeout(() => {
-        router.push('/MyExoplanetsSystem'); // Navigate to the exoplanet system
-      }, 1000); // Wait for the duration of the animation (1s)
+        router.push('/MyExoplanetsSystem');
+      }, 1000);
     }
 
-
-    // Function to move the bus and navigate
     function moveBus() {
-      busTransform.value = 'translateX(-100vw)'; // Move off-screen
+      busTransform.value = 'translateX(-100vw)'; 
       setTimeout(() => {
-        router.push('/travel'); // Change this to the desired URL
-      }, 1000); // Wait for the duration of the animation (1s)
+        router.push('/travel');
+      }, 1000);
     }
 
     onMounted(() => {
-      // Attach the moveBus function to the bus click event
       const bus = document.querySelector('.bus');
-
       if (bus) {
         bus.addEventListener('click', moveBus);
       }
@@ -68,82 +60,77 @@ export default {
 </script>
 
 <style scoped>
-
-
-
 .logo-img {
-  width: 160px; /* Adjust the size as needed */
+  width: 160px; 
   height: auto;
-  
 }
 
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-
   display: flex;
-  align-items: center; /* Center items vertically */
-  background: linear-gradient(45deg, rgba(255, 165, 0, 0.8), rgba(255, 69, 0, 0.8)); /* Gradient of different shades of orange with transparency */
-  padding: 10px 20px; /* Adjust padding for better spacing */
+  align-items: center; 
+  background: linear-gradient(45deg, rgba(255, 165, 0, 0.8), rgba(255, 69, 0, 0.8)); 
+  padding: 10px 20px; 
   font-size: 21px;
   font-weight: bold;
-  color: rgb(25, 8, 113) !important; /* Navbar text color */
-  width: 200%; /* Full width */
-  z-index: 1000; /* Ensure the navbar is on top of other elements */
+  color: rgb(25, 8, 113) !important; 
+  width: 200%; 
+  z-index: 1000; 
 }
 
 .nav-links {
   list-style: none;
-  display: flex; /* Display items side by side */
+  display: flex; 
   margin: 0;
   padding: 0;
-  list-style-type: none;
-  display: flex;
   gap: 20px;
 }
 
 .nav-links li {
-  margin-left: 20px; /* Add margin between nav items */
+  margin-left: 20px; 
 }
 
 .nav-links a {
-  color: white !important; /* Change text color */
-  font-size: 18px; /* Make text bigger */
-  font-weight: bold; /* Make text bold */
-  padding: 10px 20px; /* Add padding for button-like appearance */
-  border-radius: 5px; /* Rounded corners */
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  color: white !important; 
+  font-size: 18px; 
+  font-weight: bold; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease; 
 }
 
 .nav-links a:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Lighten background on hover */
+  background-color: rgba(255, 255, 255, 0.2); 
 }
 
-/* Background Styling */
 .background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 position: fixed;
 top: 0;
 left:0;
 width:100%;
 height:100%;
   background-image: url('@/assets/images/Trappist.jpg.webp');
-  background-size: cover; /* Stretch the image to fill the whole section */
-  background-position: center; /* Center the background image */
-  /* Ensure relative positioning for child elements */
+  background-size: cover; 
+  background-position: center; 
 }
 
-/* Bus Styling */
 .bus {
-  cursor: pointer; /* Make the bus clickable */
+  cursor: pointer; 
   position: absolute;
   bottom: -30px;
   right: 20px;
-  transition: transform 1s ease; /* Smooth transition for the bus movement */
+  transition: transform 1s ease; 
 }
 
 .bus img {
-  width: 250px; /* Set bus image width */
-  height: auto; /* Maintain aspect ratio */
+  width: 250px; 
+  height: auto; 
 }
 </style>

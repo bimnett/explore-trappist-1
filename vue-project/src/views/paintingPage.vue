@@ -23,10 +23,11 @@
         <ColorablePlanet/>
       </div>
     </div> 
-    <div class="info-container">
+    <!--<div class="info-container">
       TRAPPIST-1 b is a super Earth, which means it's a bit bigger and heavier than our planet, weighing about 1.4 times as much. It orbits its star really quickly, completing a
       full circle in just 1.5 days, and is very close to its star, at about 0.01154 AU away. Scientists discovered this fascinating planet in 2016 by watching it pass in front of its star, making it look a little dimmer for a moment!
     </div>
+    -->
   </template>
 <script>
 import ColorablePlanet from '@/components/ColorablePlanet.vue';
@@ -61,43 +62,43 @@ export default {
       this.message = "Trappist 1b";
       this.headerColor = "#679fa1";
       this.textColor = "black";
-      this.playAudio('/Audio/Audio1.wav');
+      this.playAudio('/Audio/1-b.m4a');
     },
     second_planet() {
       this.message = "Trappist 1c";
       this.headerColor = "#ffffec";
       this.textColor = "black";
-      this.playAudio('/Audio/Audio1.wav');
+      this.playAudio('/Audio/1c edit.mp3');
     },
     third_planet() {
       this.message = "Trappist 1d";
       this.headerColor = "#334763";
       this.textColor = "white";
-      this.playAudio('/Audio/Audio3.wav'); 
+      this.playAudio('/Audio/1d.mp3'); 
     },
     fourth_planet() {
       this.message = "Trappist 1e";
       this.headerColor = "#6f827b";
       this.textColor = "black";
-      this.playAudio('/Audio/Audio4.wav'); 
+      this.playAudio('/Audio/1e.mp3'); 
     },
     fifth_planet() {
       this.message = "Trappist 1f";
       this.headerColor = "#c4baae";
       this.textColor = "black";
-      this.playAudio('/Audio/Audio5.wav'); 
+      this.playAudio('/Audio/1f.m4a'); 
     },
     sixth_planet() {
       this.message = "Trappist 1g";
       this.headerColor = "#e3cfbd";
       this.textColor = "black";
-      this.playAudio('/Audio/Audio6.wav'); 
+      this.playAudio('/Audio/1g.m4a'); 
     },
     seventh_planet() {
       this.message = "Trappist 1h";
       this.headerColor = "#b88b69";
       this.textColor = "black";
-      this.playAudio('/Audio/Audio7.wav'); 
+      this.playAudio('/Audio/1h edit.mp3'); 
     },
     homePage() {
       this.$router.push({ name: 'Home' });
@@ -120,10 +121,10 @@ export default {
         align-items: center;
     }
     #text{
-      font-family: 'Poppins', sans-serif;    
-      font-style: italic;  
-      font-size: 60px;
-      text-shadow: 8px 5px 5px grey;
+        font-family: 'Poppins', sans-serif;    
+        font-style: italic;  
+        font-size: 60px;
+        text-shadow: 8px 5px 5px grey;
 
     }
     .planets-container {
@@ -148,10 +149,10 @@ export default {
         
     }
     #homePage{
-      font-size: 15px;  
-      color: white;
-       background-color: #2B1D5A;
-       border-radius: 5px;
+        font-size: 15px;  
+        color: white;
+        background-color: #2B1D5A;
+        border-radius: 5px;
         width: 100%;
         height: 5vh;
         padding: 4px 20px;
@@ -161,10 +162,8 @@ export default {
         font-size:25px;
         color: white;
         text-shadow: 8px 5px 5px grey;
-      
         }
 
-    /* put the drawing code in this container, it is yellow on screen*/
     .drawing-container {
         width: 80%;
         height: 68%; 
@@ -180,23 +179,23 @@ export default {
     }
 
     .info-container {
-    width: 80%;
-    height: 20%; 
-    bottom: 0; 
-    left: 20%;
-    background-color: #4CAF50; /* Softer green color */
-    border: 1px solid #000;
-    box-sizing: border-box;
-    margin: 0;
-    position: fixed;
-    overflow-y: auto; /* Allow scrolling */
-    padding: 15px; /* Increased padding for more space around text */
-    border-radius: 8px; /* Rounded corners for a softer look */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-    color: #ffffff; /* White text for better contrast */
-    font-family: 'Arial', sans-serif; /* Clean, modern font */
-    font-size: 16px; /* Slightly larger font size */
-    line-height: 1.5; /* Increased line height for better readability */
+        width: 80%;
+        height: 20%; 
+        bottom: 0; 
+        left: 20%;
+        background-color: #4CAF50; 
+        border: 1px solid #000;
+        box-sizing: border-box;
+        margin: 0;
+        position: fixed;
+        overflow-y: auto; 
+        padding: 15px; 
+        border-radius: 8px; 
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+        color: #ffffff; 
+        font-family: 'Arial', sans-serif; 
+        font-size: 16px; 
+        line-height: 1.5; 
 }
 
     .background-image {
@@ -299,6 +298,4 @@ export default {
         border-radius: 5px;
         cursor: pointer;
     }    
-
-    
 </style>

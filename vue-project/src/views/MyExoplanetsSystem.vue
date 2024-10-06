@@ -76,7 +76,7 @@ export default {
 
 .content {
   position: relative;
-  z-index: 2; /* Ensure content is above background */
+  z-index: 2; 
   text-align: center;
   color: white;
   margin-top: 20vh; /* Adjust as needed */
