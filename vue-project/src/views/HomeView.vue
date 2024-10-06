@@ -70,7 +70,7 @@ export default {
 <style scoped>
 
 #app {
-  background-image: url('@/assets/images/star.jpeg');
+  background-image: url('@/assets/images/Trappist.jpg.webp');
   
 }
 
@@ -130,7 +130,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-  background-image: url('@/assets/images/star.jpeg');
+  background-image: url('@/assets/images/Trappist.jpg.webp');
   background-size: cover; /* Stretch the image to fill the whole section */
   background-position: center; /* Center the background image */
   z-index:-1; /* Ensure relative positioning for child elements */
