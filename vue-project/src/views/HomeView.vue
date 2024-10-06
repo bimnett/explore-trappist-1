@@ -44,7 +44,7 @@ export default {
 
     // Function to move the bus and navigate
     function moveBus() {
-      busTransform.value = 'translateX(100vw)'; // Move off-screen
+      busTransform.value = 'translateX(-100vw)'; // Move off-screen
       setTimeout(() => {
         router.push('/painting'); // Change this to the desired URL
       }, 1000); // Wait for the duration of the animation (1s)
@@ -130,14 +130,14 @@ height:100%;
   background-image: url('@/assets/images/Trappist.jpg.webp');
   background-size: cover; /* Stretch the image to fill the whole section */
   background-position: center; /* Center the background image */
-  z-index:-1; /* Ensure relative positioning for child elements */
+  /* Ensure relative positioning for child elements */
 }
 
 /* Bus Styling */
 .bus {
   cursor: pointer; /* Make the bus clickable */
   position: absolute;
-  bottom: 20px;
+  bottom: -50px;
   right: 20px;
   transition: transform 1s ease; /* Smooth transition for the bus movement */
 }
