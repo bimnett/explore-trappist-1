@@ -56,7 +56,7 @@ export default {
 .background-image {
   position: relative;
   height: 100vh;
-  background-image: url('@/assets/space-background.jpg'); /* Replace with your image */
+  background-image: url('@/assets/images/spacebackground.jpeg'); /* Replace with your image */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

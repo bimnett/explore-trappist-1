@@ -4,7 +4,7 @@
       <img src="@/assets/images/logo.png" alt="Logo Image" class="logo-img" />
       <ul class="nav-links">
         <li><router-link to="/painting">My Painting Page</router-link></li>
-        <li><router-link to="/home">My Solar System</router-link></li>
+        <li><router-link to="/MyExoplanetsSystem">My Exoplanets System</router-link></li>
       </ul>
     </nav>
     <!-- Background Section -->
@@ -33,6 +33,13 @@ export default {
         router.push('/painting'); // Navigate to the painting page
       }, 1000); // Wait for the duration of the animation (1s)
     }
+    function goToMyExoplanetsSystem() {
+      busTransform.value = 'translateX(-100vw)'; // Move off-screen
+      setTimeout(() => {
+        router.push('/MyExoplanetsSystem'); // Navigate to the exoplanet system
+      }, 1000); // Wait for the duration of the animation (1s)
+    }
+
 
     // Function to move the bus and navigate
     function moveBus() {
