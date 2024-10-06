@@ -1,89 +1,3 @@
-<!--<script setup>-->
-
-<!--import {ref, reactive} from "vue";-->
-
-<!--</script>-->
-
-<!--<template>-->
-<!--  <div class="container">-->
-<!--    <div v-for="n in 7">-->
-<!--      <div class="planet-container" :style="{backgroundColor: colorPicker(n)}">-->
-<!--        <h1>Exoplanet {{n}}</h1>-->
-<!--        <p>Interesting facts about exoplanet {{n}}</p>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    <div class='square' :style="{ transform: `translateX(${scrollPosition}px)` }"></div>-->
-<!--  </div>-->
-<!--  <canvas id="canvas"></canvas>-->
-<!--</template>-->
-
-<!--<script>-->
-
-<!--const positions = [50, 60, 50, 40, 30, 60, 90];-->
-<!--const colors = ["#0007e2", "#0007d3", "#0007c3", "#0006b5", "#0006a6", "#000697", "#000589"]-->
-<!--function colorPicker(n) {-->
-<!--  return colors[n-1];-->
-<!--}-->
-
-<!--var scrollArea = 800 - window.innerHeight;-->
-<!--// var square1 = document.getElementsByClassName('square')[0];-->
-<!--// console.log(square1);-->
-
-<!--const scrollPosition = ref(0);-->
-
-<!--window.addEventListener("scroll", function(){-->
-<!--  var scrollTop = window.scrollY || window.scrollTop;-->
-<!--  console.log("scrollTop: "+ scrollTop);-->
-<!--  var scrollPercent = scrollTop/scrollArea || 0;-->
-<!--  console.log("scrollPercent: "+scrollPercent);-->
-<!--  scrollPosition.value = scrollPercent*window.innerWidth;-->
-<!--  console.log("scrollPosiotion: "+ scrollPosition.value);-->
-<!--  //console.log(square1);-->
-<!--  //square1.style.left = scrollPercent*window.innerWidth + 'px';-->
-
-<!--}, false);-->
-
-
-<!--// const canvas = .getElementById("canvas");-->
-<!--// const ctx = canvas.getContext("2d");-->
-<!--//-->
-<!--// ctx.setLineDash([10, 20]);-->
-<!--// console.log(ctx.getLineDash()); // [10, 20]-->
-<!--//-->
-<!--// // Draw a dashed line-->
-<!--// ctx.beginPath();-->
-<!--// ctx.moveTo(0, 50);-->
-<!--// ctx.lineTo(300, 50);-->
-<!--// ctx.stroke();-->
-<!--</script>-->
-
-<!--<style scoped>-->
-<!--* {-->
-<!--  margin: 0;-->
-<!--  padding: 0;-->
-<!--  box-sizing: border-box;-->
-<!--}-->
-<!--html, body {-->
-<!--  height: 100%;-->
-<!--  width: 100%;-->
-<!--}-->
-<!--.square {-->
-<!--  position: fixed;-->
-<!--  width: 100px;-->
-<!--  height: 100px;-->
-<!--  background: red;-->
-<!--  top: 100px;-->
-<!--  left: 900px-->
-<!--}-->
-<!--.container {-->
-<!--  height: 200vh;-->
-<!--}-->
-<!--.planet-container{-->
-<!--  height: 30vh;-->
-<!--  width: 100vw;-->
-<!--}-->
-<!--</style>-->
-
 <script setup>
 import WebHeader from '@/components/Header.vue';
 const orbitDensity = 0.1;
@@ -112,7 +26,7 @@ function dotY(n, r) {
 
 <template>
   <div class="container">
-    <WebHeader /> <!-- Include the header component here -->
+    <WebHeader /> 
     <div>
    <div v-for="m in 7" :key="m">
     <span v-for="n in parseInt(360 * (orbitDensity + densInc*m))" class="dot" :key="n" :style="{left: dotX(n, m) +'px', bottom: dotY(n, m) + 'px'}"></span>
@@ -132,13 +46,12 @@ function dotY(n, r) {
 
 <style scoped>
 .container {
-   /* Make the background fixed */
-  top: 0; /* Align to the top */
+  top: 0; 
   left: 0;
   overflow: hidden;
   background-color: black;
-  background-size: cover; /* Cover the entire area */
-  background-position: center; /* Center the image */
+  background-size: cover; 
+  background-position: center; 
   z-index: 0; 
 }
 img {
