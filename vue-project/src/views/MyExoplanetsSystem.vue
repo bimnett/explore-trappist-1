@@ -38,11 +38,21 @@ export default {
     window.addEventListener('scroll', this.handleScroll);
   },
   methods: {
-    handleScroll() {
-      const scrollY = window.scrollY;
-      const bg = document.querySelector('.background-image');
-      bg.style.backgroundSize = `${100 + scrollY / 10}%`;
-    }
+    
+  handleScroll() {
+    const scrollY = window.scrollY;
+    const bg = document.querySelector('.background-image');
+
+    // Limit the zoom to a maximum value (e.g., 200% zoom)
+    const zoom = Math.min(200, 100 + scrollY / 10);
+
+    // Request animation frame for smoother updates
+    requestAnimationFrame(() => {
+      bg.style.backgroundSize = `${zoom}%`;
+    });
+  }
+
+
   },
   beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
@@ -53,15 +63,15 @@ export default {
 
 <style scoped>
 .background-image {
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 100%; 
-  background-image: url('@/assets/images/spacebackground.jpeg'); 
-  background-size: cover; 
-  background-position: center; 
-  z-index: -1; 
+  position: fixed; /* Make the background fixed */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-image: url('@/assets/images/fantasy.jpg'); /* Replace with your image */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  z-index: -1; /* Set below other content */
 }
 
 .content {
@@ -69,7 +79,8 @@ export default {
   z-index: 2; 
   text-align: center;
   color: white;
-  margin-top: 20vh; 
+  margin-top: 20vh; /* Adjust as needed */
+  min-height: 200vh;
 }
 
 .exoplanet-system {

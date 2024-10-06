@@ -22,7 +22,7 @@
   <style scoped>
   .topbar {
     width: 100%;
-    height: 60px;
+    height: 102px;
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -111,6 +111,11 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
+position: fixed;
+top: 50px;
+left:0;
+width:100%;
+height:100%;
   background-image: url('@/assets/images/Trappist.jpg.webp');
   background-size: cover; 
   background-position: center; 
@@ -119,7 +124,7 @@ export default {
 .bus {
   cursor: pointer; 
   position: absolute;
-  bottom: -50px;
+  bottom: -30px;
   right: 20px;
   transition: transform 1s ease; 
 }
