@@ -9,7 +9,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <script>
-import paintingPage from 'vue-project/src/views/paintingPage.vue';
+import paintingPage from './views/paintingPage.vue';
 
 export default {
   components: {
