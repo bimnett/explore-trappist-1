@@ -68,9 +68,13 @@ By prioritizing painting, Trappist Explorers provides a more creative, immersive
 
 Canva presentation
 https://www.canva.com/design/DAGSzuvKZfw/_pzZ6TPsoSIqsXb0FoFG9w/view?utm_content=DAGSzuvKZfw&utm_campaign=designshare&utm_medium=link&utm_source=editor
-Supporting Research
+
 website
 https://explore-trappist.netlify.app/
+
+
+Supporting Research
+
 
 Art Therapy & Attention: Art therapy improves focus and attention, even in children with ADHD (Art Therapy on ADHD, 2014).
 Creativity & Cognitive Development: Creative activities enhance problem-solving and critical thinking (Development of Creativity in Children, 2016).
