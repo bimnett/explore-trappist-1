@@ -1,9 +1,9 @@
 <template>
     <div class="titlePlanets-container">
-        PLANETS
-    </div>
-    <div class="nameOfSystem-container">
         Trappist-1 System
+    </div>
+    <div class="nameOfPlanet-container">
+       <p id="text"> {{message}}</p>
       </div>
     <div class="planets-container">
         <button id="first-planet" @click="first_planet">Trappist 1b</button>
@@ -21,40 +21,81 @@
         Info Container
     </div>
   </template>
-
+<script>
+export default {
+   data() {
+     return {
+        message:"",
+     }; 
+    },
+    methods:{
+        first_planet(){
+            this.message="Trappist 1b";
+        },
+        second_planet(){
+            this.message="Trappist 1c";
+        },
+        third_planet(){
+            this.message="Trappist 1d";
+        },
+        fourth_planet(){
+            this.message="Trappist 1e";
+        },
+        fifth_planet(){
+            this.message="Trappist 1f";
+        },
+        sixth_planet(){
+            this.message="Trappist 1g";
+        },
+        seventh_planet(){
+            this.message="Trappist 1h";
+        },
+    },
+};
+</script>
 <style scoped>
-    .nameOfSystem-container {
+    .nameOfPlanet-container {
         width: 100%;
         height: 15%; 
         left: 20%;
         top: 0vh; 
         background-color: pink; 
-        border: 1px solid #000;
         box-sizing: border-box;
-        position:fixed;
         overflow-y:scroll;
-        font-size: 50px;
         position:fixed;
-        overflow-y:scroll;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;      
+        align-items: center;
+    }
+    #text{
+      font-family: 'Poppins', sans-serif;    
+      font-style: italic;  
+      font-size: 60px;
+      color: black;
+
     }
     .planets-container {
         width: 20%;
         height: 100%; 
         position: absolute;
         top: 15vh; 
-        left: 0%;  
-        position:fixed;
-        overflow-y:scroll; 
+        left: 0%; 
+        z-index: 1; 
     }
     .titlePlanets-container {
         width: 20%;
         height: 15%;
-        position: absolute;
         top: 0vh;
         left: 0vh;
-        font-size: 50px;
-        background-color: red;
+        font-size: 20px;
+        background-color: #2B1D5A;
         position:fixed;
+        z-index: 10;
+        border-radius: 3px;
+        padding: 10px 20px;
+        font-size: 25px;
+        color: white;
     }
 
     /* put the drawing code in this container, it is yellow on screen*/
@@ -88,11 +129,10 @@
     #first-planet {
         width: 100%;
         height: 15vh;
-        font-size: 18px;
+        font-size: 30px;
         padding: 10px 20px;
         background-color: #679fa1;
         color: white;
-        -webkit-text-stroke: 1px black;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -101,7 +141,7 @@
     #second-planet {
         width: 100%;
         height: 15vh;
-        font-size: 18px;
+        font-size: 30px;
         padding: 10px 20px;
         background-color: #ffffec;
         color: black;
@@ -113,7 +153,7 @@
     #third-planet {
         width: 100%;
         height: 15vh;
-        font-size: 18px;
+        font-size: 30px;
         padding: 10px 20px;
         background-color: #334763;
         color: white;
@@ -125,7 +165,7 @@
     #fourth-planet {
         width: 100%;
         height: 15vh;
-        font-size: 18px;
+        font-size: 30px;
         padding: 10px 20px;
         background-color: #6f827b;
         color: black;
@@ -137,7 +177,7 @@
     #fifth-planet {
         width: 100%;
         height: 15vh;
-        font-size: 18px;
+        font-size: 30px;
         padding: 10px 20px;
         background-color: #c4baae;
         color: black;
@@ -149,7 +189,7 @@
     #sixth-planet {
         width: 100%;
         height: 15vh;
-        font-size: 18px;
+        font-size: 30px;
         padding: 10px 20px;
         background-color: #e3cfbd;
         color: black;
@@ -161,7 +201,7 @@
     #seventh-planet {
         width: 100%;
         height: 15vh;
-        font-size: 18px;
+        font-size: 30px;
         padding: 10px 20px;
         background-color: #b88b69;
         color: black;
