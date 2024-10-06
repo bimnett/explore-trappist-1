@@ -184,7 +184,7 @@ export default {
   left: 0; /* Align to the left */
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  background-image: url('@/assets/images/spacebackground.jpeg'); /* Replace with your image */
+  background-image: url('@/assets/images/space.jpeg'); /* Replace with your image */
   background-size: cover; /* Cover the entire area */
   background-position: center; /* Center the image */
   z-index: -1; /* Set below other content */
