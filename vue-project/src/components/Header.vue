@@ -27,7 +27,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background-color: #ff7043; /* Orange background */
+    background-color:linear-gradient(135deg, #1a1a2e, #16213e, #0f3460); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: fixed; /* Fix the header to the top */
   top: 0; /* Align to the top */
