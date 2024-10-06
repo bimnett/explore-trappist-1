@@ -28,135 +28,132 @@
     </div>
   </template>
 
-  <style scoped>
-  .left-container {
-    width: 25%;
-    height: auto;
-    position: absolute;
-    top: 0vh;
-    left: 0;
-  }
-  .top-container {
+<style scoped>
+    .left-container {
+        width: 25%;
+        height: auto;
+        position: absolute;
+        top: 0vh;
+        left: 0;
+    }
+    .top-container {
+        width: 75%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 25%;
+    }
+    .drawing-container {
+        width: 75%;
+        height: 80%; 
+        position: absolute;
+        top: 15vh; 
+        left: 25%;
+    }
+    .info-container {
     width: 75%;
-    height: auto;
+    height: 90vh; 
     position: absolute;
-    top: 0;
-    left: 25%;
-  }
-  .drawing-container {
-    width: 75%;
-    height: 80%; 
-    position: absolute;
-    top: 15vh; 
-    left: 25%;
-  }
-  .info-container {
-  width: 75%;
-  height: 90vh; 
-  position: absolute;
-  bottom: 0vh; 
-  left: 25%; 
-}
+    bottom: 0vh; 
+    left: 25%; 
+    }
 
-.fullScreen-container {
-    
-}
-
-
-  .nameOfSystem-container {
+    .nameOfSystem-container {
     width: 100%;
     height: 15vh; 
     background-color: grey; 
     border: 1px solid #000;
     box-sizing: border-box;
-  }
-  
-  #first-planet {
-  width: 100%;  /* Set the width of the button */
-  height: 15vh;  /* Set the height of the button */
-  font-size: 18px;  /* Increase the font size */
-  padding: 10px 20px;  /* Add padding to make the button larger */
-  background-color: #679fa1;  /* Add a background color */
-  color: white;  /* Change text color */
-  -webkit-text-stroke: 1px black;
-  border: none;  /* Remove borders */
-  border-radius: 5px;  /* Add rounded corners */
-  cursor: pointer;  /* Change cursor on hover */
-}
+    position:fixed;
+    overflow-y:scroll;
+    }
 
-  #second-planet {
-  width: 100%;  /* Set the width of the button */
-  height: 15vh;  /* Set the height of the button */
-  font-size: 18px;  /* Increase the font size */
-  padding: 10px 20px;  /* Add padding to make the button larger */
-  background-color: #ffffec;  /* Add a background color */
-  color: black;  /* Change text color */
-  border: none;  /* Remove borders */
-  border-radius: 5px;  /* Add rounded corners */
-  cursor: pointer;  /* Change cursor on hover */
-}
+    #first-planet {
+    width: 100%;  /* Set the width of the button */
+    height: 15vh;  /* Set the height of the button */
+    font-size: 18px;  /* Increase the font size */
+    padding: 10px 20px;  /* Add padding to make the button larger */
+    background-color: #679fa1;  /* Add a background color */
+    color: white;  /* Change text color */
+    -webkit-text-stroke: 1px black;
+    border: none;  /* Remove borders */
+    border-radius: 5px;  /* Add rounded corners */
+    cursor: pointer;  /* Change cursor on hover */
+    }
 
- #third-planet {
-  width: 100%;  /* Set the width of the button */
-  height: 15vh;  /* Set the height of the button */
-  font-size: 18px;  /* Increase the font size */
-  padding: 10px 20px;  /* Add padding to make the button larger */
-  background-color: #334763;  /* Add a background color */
-  color: white;  /* Change text color */
-  border: none;  /* Remove borders */
-  border-radius: 5px;  /* Add rounded corners */
-  cursor: pointer;  /* Change cursor on hover */
-}
+    #second-planet {
+    width: 100%;  /* Set the width of the button */
+    height: 15vh;  /* Set the height of the button */
+    font-size: 18px;  /* Increase the font size */
+    padding: 10px 20px;  /* Add padding to make the button larger */
+    background-color: #ffffec;  /* Add a background color */
+    color: black;  /* Change text color */
+    border: none;  /* Remove borders */
+    border-radius: 5px;  /* Add rounded corners */
+    cursor: pointer;  /* Change cursor on hover */
+    }
 
-#fourth-planet {
-  width: 100%;  /* Set the width of the button */
-  height: 15vh;  /* Set the height of the button */
-  font-size: 18px;  /* Increase the font size */
-  padding: 10px 20px;  /* Add padding to make the button larger */
-  background-color: #6f827b;  /* Add a background color */
-  color: black;  /* Change text color */
-  border: none;  /* Remove borders */
-  border-radius: 5px;  /* Add rounded corners */
-  cursor: pointer;  /* Change cursor on hover */
-}
+    #third-planet {
+    width: 100%;  /* Set the width of the button */
+    height: 15vh;  /* Set the height of the button */
+    font-size: 18px;  /* Increase the font size */
+    padding: 10px 20px;  /* Add padding to make the button larger */
+    background-color: #334763;  /* Add a background color */
+    color: white;  /* Change text color */
+    border: none;  /* Remove borders */
+    border-radius: 5px;  /* Add rounded corners */
+    cursor: pointer;  /* Change cursor on hover */
+    }
 
-#fifth-planet {
-  width: 100%;  /* Set the width of the button */
-  height: 15vh;  /* Set the height of the button */
-  font-size: 18px;  /* Increase the font size */
-  padding: 10px 20px;  /* Add padding to make the button larger */
-  background-color:#c4baae ;  /* Add a background color */
-  color: black;  /* Change text color */
-  border: none;  /* Remove borders */
-  border-radius: 5px;  /* Add rounded corners */
-  cursor: pointer;  /* Change cursor on hover */
-}
+    #fourth-planet {
+    width: 100%;  /* Set the width of the button */
+    height: 15vh;  /* Set the height of the button */
+    font-size: 18px;  /* Increase the font size */
+    padding: 10px 20px;  /* Add padding to make the button larger */
+    background-color: #6f827b;  /* Add a background color */
+    color: black;  /* Change text color */
+    border: none;  /* Remove borders */
+    border-radius: 5px;  /* Add rounded corners */
+    cursor: pointer;  /* Change cursor on hover */
+    }
 
-#sixth-planet {
-  width: 100%;  /* Set the width of the button */
-  height: 15vh;  /* Set the height of the button */
-  font-size: 18px;  /* Increase the font size */
-  padding: 10px 20px;  /* Add padding to make the button larger */
-  background-color:#e3cfbd;  /* Add a background color */
-  color: black;  /* Change text color */
-  border: none;  /* Remove borders */
-  border-radius: 5px;  /* Add rounded corners */
-  cursor: pointer;  /* Change cursor on hover */
-}
+    #fifth-planet {
+    width: 100%;  /* Set the width of the button */
+    height: 15vh;  /* Set the height of the button */
+    font-size: 18px;  /* Increase the font size */
+    padding: 10px 20px;  /* Add padding to make the button larger */
+    background-color:#c4baae ;  /* Add a background color */
+    color: black;  /* Change text color */
+    border: none;  /* Remove borders */
+    border-radius: 5px;  /* Add rounded corners */
+    cursor: pointer;  /* Change cursor on hover */
+    }
 
-#seventh-planet {
-  width: 100%;  /* Set the width of the button */
-  height: 15vh;  /* Set the height of the button */
-  font-size: 18px;  /* Increase the font size */
-  padding: 10px 20px;  /* Add padding to make the button larger */
-  background-color:#b88b69;  /* Add a background color */
-  color: black;  /* Change text color */
-  border: none;  /* Remove borders */
-  border-radius: 5px;  /* Add rounded corners */
-  cursor: pointer;  /* Change cursor on hover */
-}
-  
-  .drawingPlanets-container {
+    #sixth-planet {
+    width: 100%;  /* Set the width of the button */
+    height: 15vh;  /* Set the height of the button */
+    font-size: 18px;  /* Increase the font size */
+    padding: 10px 20px;  /* Add padding to make the button larger */
+    background-color:#e3cfbd;  /* Add a background color */
+    color: black;  /* Change text color */
+    border: none;  /* Remove borders */
+    border-radius: 5px;  /* Add rounded corners */
+    cursor: pointer;  /* Change cursor on hover */
+    }
+
+    #seventh-planet {
+    width: 100%;  /* Set the width of the button */
+    height: 15vh;  /* Set the height of the button */
+    font-size: 18px;  /* Increase the font size */
+    padding: 10px 20px;  /* Add padding to make the button larger */
+    background-color:#b88b69;  /* Add a background color */
+    color: black;  /* Change text color */
+    border: none;  /* Remove borders */
+    border-radius: 5px;  /* Add rounded corners */
+    cursor: pointer;  /* Change cursor on hover */
+    }
+
+    .drawingPlanets-container {
     width: 100%;
     height: 100%; 
     background-color: yellow; 
@@ -164,19 +161,19 @@
     box-sizing: border-box;
     position:fixed;
     overflow-y:scroll;
-  }
-  
-  .nameOfPlanet-container {
+    }
+
+    .nameOfPlanet-container {
     width: 100%;
     height: 20vh; 
     background-color: blue; 
     border: 1px solid #000;
     box-sizing: border-box;
     margin: 0;
-    
-  }
 
-  .info-container {
+    }
+
+    .info-container {
     width: 100%;
     height: 20vh; 
     background-color: green; 
@@ -185,7 +182,7 @@
     margin: 0;
     position:fixed;
     overflow-y:scroll;
-    
-  }
-  </style>
+
+    }
+</style>
   
