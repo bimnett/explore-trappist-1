@@ -1,24 +1,17 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-</script>
-
 <template>
   <div id="app">
-    <paintingPage />
+    <router-view></router-view> <!-- This will render the active route component -->
   </div>
 </template>
 
 <script>
-import paintingPage from './views/paintingPage.vue';
+import { defineComponent } from 'vue';
 
-export default {
-  components: {
-    paintingPage,
-  },
-};
+export default defineComponent({
+  name: 'App',
+});
 </script>
 
-
 <style scoped>
-
+/* Add your styles here if needed */
 </style>
