@@ -54,21 +54,23 @@ export default {
 
 <style scoped>
 .background-image {
-  position: relative;
-  height: 100vh;
+  position: fixed; /* Make the background fixed */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
   background-image: url('@/assets/images/spacebackground.jpeg'); /* Replace with your image */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  transition: background-size 0.2s ease;
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  z-index: -1; /* Set below other content */
 }
 
 .content {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* Ensure content is above background */
   text-align: center;
   color: white;
-  margin-top: 20vh;
+  margin-top: 20vh; /* Adjust as needed */
 }
 
 .exoplanet-system {
