@@ -38,6 +38,7 @@
   padding: 10px 20px;  /* Add padding to make the button larger */
   background-color: #679fa1;  /* Add a background color */
   color: white;  /* Change text color */
+  -webkit-text-stroke: 1px black;
   border: none;  /* Remove borders */
   border-radius: 5px;  /* Add rounded corners */
   cursor: pointer;  /* Change cursor on hover */
