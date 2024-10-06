@@ -6,12 +6,12 @@
       </div>
       
       <nav class="navbar">
-        <router-link to="/"> <img class="nav-icon" src="@/assets/images/home-logo.png" alt="Home" /></router-link>
-        <router-link to="/painting"> <img class="nav-icon" src="@/assets/images/painting-logo.png" alt="Painting" />
+        <router-link to="/"> <img class="nav-icon" src="@/assets/images/icons/homeIcon.png" alt="Home" /></router-link>
+        <router-link to="/painting"> <img class="nav-icon" src="@/assets/images/icons/painticon.png" alt="Painting" />
         </router-link>
-        <router-link to="/MyExoplanetsSystem"> <img class="nav-icon" src="@/assets/images/bus-logo.png" alt="My Exoplanets System" />
+        <router-link to="/MyExoplanetsSystem"> <img class="nav-icon" src="@/assets/images/icons/busIcon.png" alt="My Exoplanets System" />
         </router-link>
-        <router-link to="/travel"> <img class="nav-icon" src="@/assets/images/space-logo.png" alt="Space Travel" />
+        <router-link to="/travel"> <img class="nav-icon" src="@/assets/images/icons/planetIcon.png" alt="Space Travel" />
         </router-link>
       </nav>
     </div>
