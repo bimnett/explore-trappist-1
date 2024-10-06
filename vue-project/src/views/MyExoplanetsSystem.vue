@@ -1,9 +1,5 @@
 <template>
-    <div class="video-background">
-      <video autoplay muted loop id="bg-video">
-        <source src="@/assets/spaceBackgroundVideo.mov" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <div class="background-image">
       <div class="content">
         <h1>My Exoplanets System</h1>
 <div class="exoplanet-system">
@@ -30,26 +26,34 @@ export default {
         'Trappist1f.png',
         'trappist1g.png']
     };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const scrollY = window.scrollY;
+      const bg = document.querySelector('.background-image');
+      // Zoom effect as you scroll down
+      bg.style.backgroundSize = `${100 + scrollY / 10}%`;
+    }
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
   }
   };
 </script>
   
 
 <style scoped>
-.video-background {
+.background-image {
   position: relative;
   height: 100vh;
-  overflow: hidden;
-}
-
-#bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
-  object-fit: cover;
+  background-image: url('@/assets/space-background.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  transition: background-size 0.2s ease;
 }
 
 .content {
