@@ -73,6 +73,11 @@ By prioritizing painting, **Trappist Explorers** provides a more creative, immer
 
 ---
 
+## Link to the Trappist Explorers
+https://explore-trappist.netlify.app/
+
+---
+
 ## Supporting Research
 
 - **Art Therapy & Attention**: Art therapy improves focus and attention, even in children with ADHD (*Art Therapy on ADHD*, 2014).
