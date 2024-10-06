@@ -125,12 +125,15 @@ export default {
 
 /* Background Styling */
 .background {
+position: fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
   background-image: url('@/assets/images/star.jpeg');
-  background-size: 100% 100%; /* Stretch the image to fill the whole section */
+  background-size: cover; /* Stretch the image to fill the whole section */
   background-position: center; /* Center the background image */
-  height: 100vh; /* Full height */
-  width: 100vw; /* Full width */
-  position: relative; /* Ensure relative positioning for child elements */
+  z-index:-1; /* Ensure relative positioning for child elements */
 }
 
 /* Bus Styling */
