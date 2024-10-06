@@ -1,6 +1,8 @@
 <template>
 
-    <div class="titlePlanets-container">
+    <div>
+    <WebHeader />
+     class="titlePlanets-container">
      <button id="homePage" @click="homePage">Go to My Main Page</button>
        <div id="system_name"> Trappist-1 System</div>
     </div>
@@ -24,7 +26,12 @@
     </div>
   </template>
 <script>
+import WebHeader from '@/components/Header.vue'; 
+
 export default {
+    components: {
+    WebHeader  
+  },
    data() {
      return {
         message:"",

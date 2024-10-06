@@ -1,12 +1,8 @@
 <template>
-  <div id="app"> <!-- Use a div instead of body to maintain a single root element -->
-    <nav class="navbar">
-      <img src="@/assets/images/logo.png" alt="Logo Image" class="logo-img" />
-      <ul class="nav-links">
-        <li><router-link to="/painting">My Painting Page</router-link></li>
-        <li><router-link to="/MyExoplanetsSystem">My Exoplanets System</router-link></li>
-      </ul>
-    </nav>
+  <div >
+  <WebHeader />
+  id="app"> <!-- Use a div instead of body to maintain a single root element -->
+    
     <!-- Background Section -->
     <div class="background">
       <div class="bus" @click="moveBus" :style="{ transform: busTransform }">
@@ -17,10 +13,15 @@
 </template>
 
 <script>
+import WebHeader from '@/components/Header.vue'; 
+
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 
 export default {
+  components: {
+    WebHeader  
+  },
   name: "HomeView",
   setup() {
     const router = useRouter();
