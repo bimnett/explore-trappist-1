@@ -1,4 +1,6 @@
 <template>
+     <div>
+    <WebHeader />
     <div class="background-image">
       <div class="content">
         <h1>My Exoplanets System</h1>
@@ -11,10 +13,15 @@
 </div>
 </div>
 </div>
+</div>
 </template>
 
 <script>
+import WebHeader from '@/components/Header.vue'; 
 export default {
+  components: {
+    WebHeader  
+  },
   data() {
     return {
       savedPlanets:

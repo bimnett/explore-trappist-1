@@ -4,7 +4,7 @@
       <img src="@/assets/images/logo.png" alt="Logo Image" class="logo-img" />
       <ul class="nav-links">
         <li><router-link to="#" @click.prevent="goToPaintingPage">My Painting Page</router-link></li>
-        <li><router-link to="#" @click.prevent="goToExoplanetSystem">My Solar System</router-link></li>
+        <li><router-link to="#" @click.prevent="goToExoplanetSystem">My Exoplanets system</router-link></li>
       </ul>
     </nav>
     <!-- Background Section -->

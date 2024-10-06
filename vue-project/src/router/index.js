@@ -16,7 +16,7 @@ const routes = [
     component: PaintingPage, 
   },
   {
-    path:'/MyExoplanetSystem',
+    path:'/My-Exoplanet-System',
     name: 'MyexoplanetSystem',
     component: MyExoplanetsSystem,
   },
