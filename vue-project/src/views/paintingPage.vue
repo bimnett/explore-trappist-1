@@ -14,7 +14,8 @@
         <button id="sixth-planet" @click="sixth_planet">Trappist 1g</button>
         <button id="seventh-planet" @click="seventh_planet">Trappist 1h</button>
       </div>    
-    <div class= "drawing-container">
+    <div class= "drawing-container"> 
+        /* put the drawing code in this container, it is yellow on screen*/
         drawing-container
     </div> 
     <div class="info-container">
@@ -46,6 +47,9 @@
         position:fixed;
         overflow-y:scroll; 
     }
+    .planets-container::-webkit-scrollbar {
+        display: none; 
+    }
     .titlePlanets-container {
         width: 20%;
         height: 15%;
@@ -72,16 +76,16 @@
     }
 
     .info-container {
-    width: 100%;
-    height: 20%; 
-    bottom: 0vh; 
-    left: 20%;
-    background-color: green; 
-    border: 1px solid #000;
-    box-sizing: border-box;
-    margin: 0;
-    position:fixed;
-    overflow-y:scroll;
+        width: 100%;
+        height: 20%; 
+        bottom: 0vh; 
+        left: 20%;
+        background-color: green; 
+        border: 1px solid #000;
+        box-sizing: border-box;
+        margin: 0;
+        position:fixed;
+        overflow-y:scroll;
 
     }
 
