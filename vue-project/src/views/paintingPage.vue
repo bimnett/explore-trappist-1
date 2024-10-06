@@ -17,6 +17,7 @@
         <button id="fifth-planet" @click="fifth_planet">Trappist 1f</button>
         <button id="sixth-planet" @click="sixth_planet">Trappist 1g</button>
         <button id="seventh-planet" @click="seventh_planet">Trappist 1h</button>
+        <button id="play-sound" @click="playSound1">Play Sound</button>
       </div>    
     <div class= "drawing-container">
       <div class="background-image">
@@ -42,6 +43,7 @@ export default {
         message:"",
         headerColor: "#2B1D5A",
         textColor:"black",
+        audio: null,
      }; 
     },
     methods:{
@@ -83,6 +85,12 @@ export default {
         homePage(){
             this.$router.push({ name: 'Home' });
         },
+        playSound1() {
+            if (!this.audio) {
+                this.audio = new Audio('/Audio/Audio1.wav'); 
+            }
+            this.audio.play();
+        }
     },
 };
 </script>
