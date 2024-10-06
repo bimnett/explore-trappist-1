@@ -8,7 +8,7 @@
         <router-link to="/">Home</router-link>
         <router-link to="/painting">Painting</router-link>
         <router-link to="/MyExoplanetsSystem">My Exoplanets System</router-link>
-        <router-link to="/space-travel">Space Travel</router-link>
+        <router-link to="/travel">Space Travel</router-link>
       </nav>
     </div>
   </template>

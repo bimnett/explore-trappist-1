@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue'; // Import HomeView
 import PaintingPage from '../views/paintingPage.vue'; // Import PaintingPage
 import MyExoplanetsSystem from '../views/MyExoplanetsSystem.vue';
+import Spacetravel from '@/views/Spacetravel.vue';
 
 const routes = [
   {
@@ -18,7 +19,13 @@ const routes = [
     path:'/MyExoplanetsSystem',
     name : 'MyExoplanetsSystem',
     component: MyExoplanetsSystem,
+  },
+  {
+    path:'/travel',
+    name : 'SpaceTravel',
+    component: Spacetravel,
   }
+  
 ];
 
 const router = createRouter({

@@ -46,7 +46,7 @@ export default {
     function moveBus() {
       busTransform.value = 'translateX(-100vw)'; // Move off-screen
       setTimeout(() => {
-        router.push('/painting'); // Change this to the desired URL
+        router.push('/travel'); // Change this to the desired URL
       }, 1000); // Wait for the duration of the animation (1s)
     }
 

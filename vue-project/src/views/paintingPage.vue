@@ -29,11 +29,13 @@
     </div>
   </template>
 <script>
+import ColorablePlanet from '@/components/ColorablePlanet.vue';
 import WebHeader from '@/components/Header.vue'; 
 
 export default {
     components: {
-    WebHeader  
+    WebHeader,
+    ColorablePlanet 
   },
    data() {
      return {
