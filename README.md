@@ -2,6 +2,23 @@
 
 **Trappist Explorers** is an educational website designed to ignite children's curiosity about exoplanets, especially those in the TRAPPIST-1 system. The site provides engaging, age-appropriate content to make the complex topic of exoplanets accessible and exciting for young learners.
 
+Note: This project was created as part of the NASA Space Apps Challenge 2024, specifically for the challenge titled Chronicles of Exoplanet Exploration.
+
+## Purpose and Scope
+
+The purpose of Trappist Explorers is to introduce children to the fascinating world of exoplanets in a fun, accessible way. By focusing on the TRAPPIST-1 system, the project aims to simplify complex astronomical concepts and foster creativity through interactive features like painting and personalized exoplanet systems.
+
+## Intended Use Cases:
+
+Educational tool for learning about exoplanets
+Creative outlet combining storytelling and painting
+Platform for personalized space exploration experiences
+
+## Target Audience
+
+Children (Ages 6+): Young learners interested in space exploration.
+Space Enthusiasts: Anyone curious about the TRAPPIST-1 system.
+
 ## Key Features
 
 ### Home Page
@@ -63,3 +80,21 @@ By prioritizing painting, **Trappist Explorers** provides a more creative, immer
 - **Mindfulness Benefits**: Mindfulness practices improve focus and reduce stress (*Mindfulness Training for Children*, 2018).
 - **Emotional Well-being**: Art therapy enhances emotional regulation and self-esteem (*Impact of Art Therapy on Children*, 2012).
 - **Screen Time Drawbacks**: Excessive screen time can negatively affect attention, sleep, and social development (*Impact of Screen Time*, 2018).
+
+## Contributors
+
+We appreciate the contributions of everyone involved in this project. Below is the list of team members who collaborated to bring Trappist Explorers to life:
+
+**Reihaneh Abbasi**
+
+**Nika Balouchzadeh**
+
+**Pavlo Ovchynnykov**
+
+**Rene lgnacio Gonzalez Perez**
+
+**Pavlo Ovchynnykov**
+
+**Laura Swiecicka** 
+
+**Bimnet Tesfamariam**
