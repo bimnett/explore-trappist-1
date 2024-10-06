@@ -7,7 +7,7 @@
       <nav class="navbar">
         <router-link to="/">Home</router-link>
         <router-link to="/painting">Painting</router-link>
-        <router-link to="/my-solar-system">My Exoplanets System</router-link>
+        <router-link to="/MyExoplanetsSystem">My Exoplanets System</router-link>
         <router-link to="/space-travel">Space Travel</router-link>
       </nav>
     </div>
@@ -29,6 +29,10 @@
     padding: 0 20px;
     background-color: #ff7043; /* Orange background */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fix the header to the top */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  z-index: 1000;
   }
   
   .title-header {
