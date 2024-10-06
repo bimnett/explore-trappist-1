@@ -1,9 +1,11 @@
 <template>
+
     <div class="titlePlanets-container">
-        Trappist-1 System
+     <button id="homePage" @click="homePage">Go to My Main Page</button>
+       <div id="system_name"> Trappist-1 System</div>
     </div>
-    <div class="nameOfPlanet-container">
-       <p id="text"> {{message}}</p>
+    <div :style="{ backgroundColor: headerColor, color: textColor }"  class="nameOfPlanet-container">
+       <div id="text"> {{message}}</div>
       </div>
     <div class="planets-container">
         <button id="first-planet" @click="first_planet">Trappist 1b</button>
@@ -14,53 +16,70 @@
         <button id="sixth-planet" @click="sixth_planet">Trappist 1g</button>
         <button id="seventh-planet" @click="seventh_planet">Trappist 1h</button>
       </div>    
-    <div class= "drawing-container"> 
-        /* put the drawing code in this container, it is yellow on screen*/
+    <div class= "drawing-container">
         drawing-container
     </div> 
     <div class="info-container">
         Info Container
     </div>
-</template>
+  </template>
 <script>
 export default {
    data() {
      return {
         message:"",
+        headerColor: "#2B1D5A",
+        textColor:"black",
      }; 
     },
     methods:{
         first_planet(){
             this.message="Trappist 1b";
+            this.headerColor = "#679fa1";
+            this.textColor= "black";
         },
         second_planet(){
             this.message="Trappist 1c";
+            this.headerColor = "#ffffec";
+            this.textColor= "black";
         },
         third_planet(){
             this.message="Trappist 1d";
+            this.headerColor = "#334763";
+            this.textColor= "white";
         },
         fourth_planet(){
             this.message="Trappist 1e";
+            this.headerColor = "6f827b";
+            this.textColor= "black";
         },
         fifth_planet(){
             this.message="Trappist 1f";
+            this.headerColor = "#c4baae";
+            this.textColor= "black";
         },
         sixth_planet(){
             this.message="Trappist 1g";
+            this.headerColor = "#e3cfbd";
+            this.textColor= "black";
         },
         seventh_planet(){
             this.message="Trappist 1h";
+            this.headerColor = "#b88b69";
+            this.textColor= "black";
+        },
+        homePage(){
+            this.$router.push({ name: 'Home' });
         },
     },
 };
 </script>
 <style scoped>
     .nameOfPlanet-container {
-        width: 100%;
+        width: 80%;
         height: 15%; 
         left: 20%;
         top: 0vh; 
-        background-color: pink; 
         box-sizing: border-box;
         overflow-y:scroll;
         position:fixed;
@@ -73,7 +92,7 @@ export default {
       font-family: 'Poppins', sans-serif;    
       font-style: italic;  
       font-size: 60px;
-      color: black;
+      text-shadow: 8px 5px 5px grey;
 
     }
     .planets-container {
@@ -84,28 +103,40 @@ export default {
         left: 0%; 
         z-index: 1; 
     }
-    .planets-container::-webkit-scrollbar {
-        display: none; 
-    }
     .titlePlanets-container {
         width: 20%;
         height: 15%;
         top: 0vh;
         left: 0vh;
-        font-size: 20px;
         background-color: #2B1D5A;
         position:fixed;
         z-index: 10;
         border-radius: 3px;
-        padding: 10px 20px;
-        font-size: 25px;
-        color: white;
+        justify-content: center;      
+        align-items: center;
+        
     }
+    #homePage{
+      font-size: 15px;  
+      color: white;
+       background-color: #2B1D5A;
+       border-radius: 5px;
+        width: 100%;
+        height: 5vh;
+        padding: 4px 20px;
+        
+    }
+    #system_name{
+        font-size:25px;
+        color: white;
+        text-shadow: 8px 5px 5px grey;
+      
+        }
 
     /* put the drawing code in this container, it is yellow on screen*/
     .drawing-container {
-        width: 100%;
-        height: 65%; 
+        width: 80%;
+        height: 68%; 
         position: absolute;
         top: 15vh; 
         left: 20%;
@@ -114,19 +145,21 @@ export default {
         box-sizing: border-box;
         position:fixed;
         overflow-y:scroll;
+        border-radius:3px;
     }
 
     .info-container {
-        width: 100%;
-        height: 20%; 
-        bottom: 0vh; 
-        left: 20%;
-        background-color: green; 
-        border: 1px solid #000;
-        box-sizing: border-box;
-        margin: 0;
-        position:fixed;
-        overflow-y:scroll;
+    width: 80%;
+    height: 17%; 
+    bottom: 0vh; 
+    left: 20%;
+    background-color: grey; 
+    border: 1px solid #000;
+    box-sizing: border-box;
+    margin: 0;
+    position:fixed;
+    overflow-y:scroll;
+    border-radius:3px;
 
     }
 
@@ -136,10 +169,10 @@ export default {
         font-size: 30px;
         padding: 10px 20px;
         background-color: #679fa1;
-        color: white;
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        text-shadow: 8px 5px 5px grey;
     }
 
     #second-planet {
@@ -148,10 +181,11 @@ export default {
         font-size: 30px;
         padding: 10px 20px;
         background-color: #ffffec;
-        color: black;
+        
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        text-shadow: 8px 5px 5px grey;
     }
 
     #third-planet {
@@ -164,6 +198,7 @@ export default {
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        text-shadow: 8px 5px 5px grey;
     }
 
     #fourth-planet {
@@ -172,10 +207,11 @@ export default {
         font-size: 30px;
         padding: 10px 20px;
         background-color: #6f827b;
-        color: black;
+        
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        text-shadow: 8px 5px 5px grey;
     }
 
     #fifth-planet {
@@ -184,10 +220,11 @@ export default {
         font-size: 30px;
         padding: 10px 20px;
         background-color: #c4baae;
-        color: black;
+        
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        text-shadow: 8px 5px 5px grey;
     }
 
     #sixth-planet {
@@ -196,10 +233,11 @@ export default {
         font-size: 30px;
         padding: 10px 20px;
         background-color: #e3cfbd;
-        color: black;
+        
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        text-shadow: 8px 5px 5px grey;
     }
 
     #seventh-planet {
@@ -208,7 +246,7 @@ export default {
         font-size: 30px;
         padding: 10px 20px;
         background-color: #b88b69;
-        color: black;
+        
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -216,4 +254,3 @@ export default {
 
     
 </style>
-  
