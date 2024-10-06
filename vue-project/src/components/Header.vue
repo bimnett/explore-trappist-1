@@ -1,7 +1,7 @@
 <template>
     <div class="topbar">
       <div class="title-header">
-        <img src="@/assets/images/logo.png" alt="Logo" class="header-logo" />
+        <img class= "logo-img" src="@/assets/images/logo.png" alt="Logo" />
         <h3>Trappist Explorers</h3>
       </div>
       
@@ -35,7 +35,7 @@
   left: 0; /* Align to the left */
   z-index: 1000;
   }
-  .header-logo {
+  .logo-img {
   height: 80px; /* Adjust height as needed */
   margin-right: 10px; /* Space between logo and title */
   margin-top: -15px;
