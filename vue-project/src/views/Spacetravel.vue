@@ -139,7 +139,7 @@ function dotY(n, r) {
   background-color: black;
   background-size: cover; /* Cover the entire area */
   background-position: center; /* Center the image */
-  z-index: -1; 
+  z-index: 0; 
 }
 img {
   position: absolute;
