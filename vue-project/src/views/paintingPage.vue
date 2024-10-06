@@ -17,14 +17,22 @@
         <button id="seventh-planet" @click="seventh_planet">Trappist 1h</button>
       </div>    
     <div class= "drawing-container">
-        drawing-container
+      <div class="background-image">
+        <ColorablePlanet/>
+      </div>
     </div> 
     <div class="info-container">
-        Info Container
+      TRAPPIST-1 b is a super Earth, which means it's a bit bigger and heavier than our planet, weighing about 1.4 times as much. It orbits its star really quickly, completing a
+      full circle in just 1.5 days, and is very close to its star, at about 0.01154 AU away. Scientists discovered this fascinating planet in 2016 by watching it pass in front of its star, making it look a little dimmer for a moment!
     </div>
   </template>
 <script>
+import ColorablePlanet from '@/components/ColorablePlanet.vue';
+
 export default {
+  components: {
+    ColorablePlanet
+  },
    data() {
      return {
         message:"",
@@ -150,18 +158,35 @@ export default {
 
     .info-container {
     width: 80%;
-    height: 17%; 
-    bottom: 0vh; 
+    height: 20%; 
+    bottom: 0; 
     left: 20%;
-    background-color: grey; 
+    background-color: #4CAF50; /* Softer green color */
     border: 1px solid #000;
     box-sizing: border-box;
     margin: 0;
-    position:fixed;
-    overflow-y:scroll;
-    border-radius:3px;
+    position: fixed;
+    overflow-y: auto; /* Allow scrolling */
+    padding: 15px; /* Increased padding for more space around text */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    color: #ffffff; /* White text for better contrast */
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
+    font-size: 16px; /* Slightly larger font size */
+    line-height: 1.5; /* Increased line height for better readability */
+}
 
-    }
+    .background-image {
+  position: fixed; /* Make the background fixed */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-image: url('@/assets/images/spacebackground.jpeg'); /* Replace with your image */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  z-index: -1; /* Set below other content */
+}
 
     #first-planet {
         width: 100%;
