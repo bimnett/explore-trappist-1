@@ -114,8 +114,8 @@ function dotY(n, r) {
   <div class="container">
     <WebHeader /> <!-- Include the header component here -->
     <div>
-   <div v-for="m in 7":key="m">
-    <span v-for="n in parseInt(360 * (orbitDensity + densInc*m))" class="dot" :key="n":style="{left: dotX(n, m) +'px', bottom: dotY(n, m) + 'px'}"></span><>
+   <div v-for="m in 7" :key="m">
+    <span v-for="n in parseInt(360 * (orbitDensity + densInc*m))" class="dot" :key="n" :style="{left: dotX(n, m) +'px', bottom: dotY(n, m) + 'px'}"></span>
    </div>
 
    <a href="https://science.nasa.gov/exoplanet-catalog/trappist-1-b/"><img src="../assets/trappist1.png" alt="" class="trappist1"></a>
@@ -127,15 +127,19 @@ function dotY(n, r) {
    <a href="https://science.nasa.gov/exoplanet-catalog/trappist-1-g/"><img src="../assets/trappist1g.png" alt="" class="trappist1g"></a>
    <a href="https://science.nasa.gov/exoplanet-catalog/trappist-1-h/"><img src="../assets/trappist1h.png" alt="" class="trappist1h"></a>
  </div>
+  </div>
 </template>
 
 <style scoped>
 .container {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
+   /* Make the background fixed */
+  top: 0; /* Align to the top */
+  left: 0;
   overflow: hidden;
   background-color: black;
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  z-index: -1; 
 }
 img {
   position: absolute;
@@ -146,7 +150,7 @@ img {
   width: 200px;
   height: 200px;
   bottom: 250px;
-  left: 330px;
+  left: 361px;
 }
 .trappist1b{
   bottom: 200px;
